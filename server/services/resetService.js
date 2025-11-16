@@ -1,0 +1,33 @@
+import { QdrantClient } from "@qdrant/js-client-rest";
+import "dotenv/config";
+
+const qdrant = new QdrantClient({
+  url: process.env.QDRANT_URL || "http://localhost:6333",
+  apiKey: process.env.QDRANT_API_KEY || undefined,
+  https: {
+    rejectUnauthorized: false,
+  },
+  checkCompatibility: false,
+});
+
+// Function to delete a collection if it exists
+export const resetVectorStore = async (collectionName) => {
+  try {
+    console.log("Testing Qdrant connection...");
+    const exists = await qdrant.getCollections();            // Fetch all existing collections
+    const names = exists.collections.map((c) => c.name);    // Extract collection names
+
+    // Check existence
+    if (names.includes(collectionName)) {               // If target collection exists
+      await qdrant.deleteCollection(collectionName);    // Delete it
+      console.log(`[INFO] Qdrant collection "${collectionName}" deleted.`);
+    } else {
+      console.log(
+        `[INFO] Collection "${collectionName}" does not exist. Nothing to delete.`
+      );
+    }
+  } catch (error) {
+    console.error("Failed to delete collection:", error);
+    throw error;
+  }
+};
