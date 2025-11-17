@@ -106,9 +106,9 @@ function FileUpload({
     <div className="flex h-screen flex-col bg-background">
       <div className="grid h-full grid-cols-1 md:grid-cols-5 bg-background">
         {/* Left side - 60% */}
-        <div className="flex flex-col h-full w-full col-span-3 border-b border-border md:border-b-0 px-8 bg-muted">
+        <div className="flex flex-col h-full w-full col-span-3 border-b border-border md:border-b-0 px-8 bg-background">
           {/* NavBar moved inside left side */}
-          <nav className="h-20 border-border">
+          <nav className="h-20 bg-background border-border">
             <div className="flex items-center justify-end h-full">
               <span className="text-2xl md:text-4xl text-primary font-light">
                 {"["}
@@ -175,7 +175,7 @@ function FileUpload({
                   />
 
                   <Button asChild variant="outline" size="lg">
-                    <label htmlFor="file-input" className="cursor-pointer bg-muted hover:bg-blue-200">
+                    <label htmlFor="file-input" className="cursor-pointer">
                       Choose File
                     </label>
                   </Button>
