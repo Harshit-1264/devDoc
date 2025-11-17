@@ -119,7 +119,7 @@ function FileUpload({
                 {"["}
               </span>
               <h1 className="text-xl md:text-2xl font-bold text-primary">
-                vector-docs{" "}
+                Dev-docs{" "}
               </h1>
               <span className="text-2xl md:text-4xl  text-primary font-light">
                 {"]"}
