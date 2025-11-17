@@ -183,10 +183,10 @@ devDoc/
 
 ### **1. Clone the Repo**
 ```bash
-git clone https://github.com/Harshit-1264
+git clone https://github.com/Harshit-1264/devDoc
 cd devDoc
-
-2. Install Dependencies
+```
+### **2. Install Dependencies
 Backend:
 cd server
 npm install
@@ -214,3 +214,4 @@ nodemon index.js
 Frontend:
 cd client
 npm run dev
+
