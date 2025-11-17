@@ -78,7 +78,7 @@ export const handleWebsiteLink = async (
 
     // Make the actual API call
     const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/web-crawler`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/web-crawler`,
       {
         URL: websiteLink,
       }
@@ -127,7 +127,7 @@ export const startEmbeddingYtVideo = async (
   try {
     setUploading(true);
     const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/yt-transcript`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/yt-transcript`,
       {
         URL: YtLink,
       }

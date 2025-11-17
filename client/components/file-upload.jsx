@@ -43,7 +43,7 @@ function FileUpload({
   onFileUpload,
   onYtVideoEmbedded,
   setCurrentStep,
-  apiEndpoint = `${process.env.NEXT_PUBLIC_BASE_URL}/api/upload`,
+  apiEndpoint = `${process.env.NEXT_PUBLIC_API_URL}/api/upload`,
 }) {
   const [dragActive, setDragActive] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
