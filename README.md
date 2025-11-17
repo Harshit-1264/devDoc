@@ -55,11 +55,11 @@ This ensures accuracy, freshness, and grounded answers.
 ## devDoc – Smart Document Search & Q&A
 
 devDoc allows users to:
-* 📄 Upload PDF, DOCX, TXT documents
-* ▶️ Process YouTube videos using transcript extraction
-* 🌐 Crawl websites for text content
-* 🤖 Ask question(s) in real-time
-* ⚡ Receive context-aware responses powered by Gemini 2.5 Flash
+* Upload PDF, DOCX, TXT documents
+* Process YouTube videos using transcript extraction
+* Crawl websites for text content
+* Ask question(s) in real-time
+* Receive context-aware responses powered by Gemini 2.5 Flash
 
 The system handles:
 * Text extraction
@@ -113,7 +113,7 @@ The system handles:
 
 ---
 
-## 🧩 How It Works (Pipeline)
+## How It Works (Pipeline)
 
 ### **1. Upload / Input**
 User uploads files, YouTube link, or website URL.
@@ -137,7 +137,7 @@ Chunks + user question → Gemini → final answer.
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### ** Upload Document**
 **POST** `/api/upload`
@@ -150,7 +150,7 @@ Chunks + user question → Gemini → final answer.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 devDoc/
@@ -222,5 +222,3 @@ nodemon index.js
 cd client
 npm run dev
 ```
-
-
