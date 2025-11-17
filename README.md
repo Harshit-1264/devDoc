@@ -109,3 +109,34 @@ The system handles:
                 ▼
       [Final Answer Returned]
 ```
+
+
+---
+
+## 🧩 How It Works (Pipeline)
+
+### **1. Upload / Input**
+User uploads files, YouTube link, or website URL.
+
+### **2. Extract**
+- pdf-parse for PDFs  
+- mammoth for DOCX  
+- YouTube transcript extraction  
+- Playwright web scraping  
+
+### **3. Chunk & Embed**
+- Text split into chunks  
+- Embeddings generated  
+- Stored in Qdrant  
+
+### **4. Retrieve**
+Semantic search fetches the most relevant chunks.
+
+### **5. Generate**
+Chunks + user question → Gemini → final answer.
+
+---
+
+## 🔌 API Endpoints
+
+### **📁 Upload Document**
