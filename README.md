@@ -1,4 +1,4 @@
-# 📘 devDoc — AI-Powered Smart Document Search & Q&A
+# devDoc — AI-Powered Smart Document Search & Q&A
 
 devDoc is an advanced full-stack GenAI application that allows users to upload documents (PDF, DOCX, TXT), process YouTube videos, crawl websites, and ask natural-language questions about the content.
 The system uses RAG (Retrieval-Augmented Generation), Vector Databases, and Google Gemini 2.5 Flash to deliver fast, precise, context-aware answers.
@@ -7,7 +7,7 @@ The project blends modern full-stack development with AI-oriented architecture i
 
 -----
 
-# Why This Project?
+## Why This Project?
 
 Before RAG existed, the only way to provide context to an AI model was to send all the data with every prompt.
 This approach fails when:
@@ -23,7 +23,7 @@ This is where Vector Databases and RAG come in.
 
 -----
 
-# What Are Vector Databases?
+## What Are Vector Databases?
 
 Imagine every piece of text converted into a point in a high-dimensional space (like coordinates x, y, z in 3D).
 Now imagine all points in Uttar Pradesh mapped in this space.
@@ -41,7 +41,7 @@ This is what a Vector Database like Qdrant does:
 
 -----
 
-# What Is RAG (Retrieval-Augmented Generation)?
+## What Is RAG (Retrieval-Augmented Generation)?
 
 Continuing the Gorakhpur example:
 1. You ask a question
@@ -52,7 +52,7 @@ This ensures accuracy, freshness, and grounded answers.
 
 -----
 
-# devDoc – Smart Document Search & Q&A
+## devDoc – Smart Document Search & Q&A
 
 devDoc allows users to:
 * 📄 Upload PDF, DOCX, TXT documents
@@ -71,14 +71,41 @@ The system handles:
 
 -----
 
-# Tech Stack
+## Tech Stack
 
-- **Frontend:** Next.js, React, Tailwind CSS, Framer Motion (animations)
-- **Backend:** Node.js, Express (deployed on Azure)
-- **Document Parsing:** pdf-parse, mammoth
-- **Media Processing:** YouTube transcript extraction, playwright
+- **Frontend:** Next.js, React, Tailwind CSS
+- **Backend:** Node.js (Express), Multer for file uploads, LangChain.js for RAG pipeline
+- **Document / Content Extraction:** pdf-parse, mammoth(DOCX), Playwright (Web crawling), YouTube transcript extraction 
 - **Vector DB:** Qdrant Cloud
 - **AI Model:** Google Gemini 2.5 Flash
-- **Orchestration:** LangChain.js
 
 -----
+
+## Architecture
+
+```
+              [User]
+                │
+                ▼
+        [Next.js Frontend]
+                │
+                ▼
+        [Node.js Backend API]
+                │
+   ___________________________
+  │             │             │
+  ▼             ▼             ▼
+[Uploads]  [Web Crawler]  [YouTube Transcript]
+                │
+                ▼
+      [Chunking + Embedding]
+                │
+                ▼
+        [Qdrant Vector DB]
+                │
+                ▼
+        [Gemini 2.5 Flash]
+                │
+                ▼
+      [Final Answer Returned]
+```
