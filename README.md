@@ -70,3 +70,15 @@ The system handles:
 * RAG-based answer generation
 
 -----
+
+# Tech Stack
+
+- **Frontend:** Next.js, React, Tailwind CSS, Framer Motion (animations)
+- **Backend:** Node.js, Express (deployed on Azure)
+- **Document Parsing:** pdf-parse, mammoth
+- **Media Processing:** YouTube transcript extraction, playwright
+- **Vector DB:** Qdrant Cloud
+- **AI Model:** Google Gemini 2.5 Flash
+- **Orchestration:** LangChain.js
+
+-----
