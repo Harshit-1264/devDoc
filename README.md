@@ -140,18 +140,77 @@ Chunks + user question → Gemini → final answer.
 ## 🔌 API Endpoints
 
 ### ** Upload Document**
-**POST** /api/upload
-
+**POST** `/api/upload`
 ### ** YouTube Transcript**
-**POST** /api/yt-transcript
-
+**POST** `/api/yt-transcript`
 ### ** Crawl Website**
-**POST** /api/web-crawler
-
+**POST** `/api/web-crawler`
 ### ** Q&A**
-**POST** /api/ask
+**POST** `/api/ask`
 
 ---
 
 ## 📁 Project Structure
 
+```
+devDoc/
+├── client/ # Next.js frontend
+│   ├── app/
+│   ├── components/
+|   |     ├── ui/
+│   │     ├── chat-interface.jsx       
+│   │     ├── file-upload.jsx  
+│   │     └── progress-popup.tsx 
+│ ├── utils/
+│ └── package.json
+│
+└── server/ # Node.js backend
+|   ├── controllers/
+|   ├── routes/
+|   ├── services/
+|   │   │   ├── parseService.js      
+|   │   │   ├── ragService.js        
+|   │   │   └── resetService.js
+|   ├── uploads/
+|   └── package.json
+└── README.md
+```
+
+
+---
+
+## 🛠 Installation & Setup
+
+### **1. Clone the Repo**
+```bash
+git clone https://github.com/Harshit-1264
+cd devDoc
+
+2. Install Dependencies
+Backend:
+cd server
+npm install
+
+Frontend:
+cd ../client
+npm install
+
+Environment Variables
+server/.env
+GOOGLE_API_KEY=your_key
+QDRANT_URL=your_qdrant_url
+QDRANT_API_KEY=your_qdrant_api_key
+PORT=4000
+
+client/.env.local
+NEXT_PUBLIC_YOUTUBE_API_KEY=your_key
+NEXT_PUBLIC_BASE_URL=http://localhost:4000
+
+Run Project
+Backend:
+cd server
+nodemon index.js
+
+Frontend:
+cd client
+npm run dev
