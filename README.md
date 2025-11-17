@@ -1,4 +1,4 @@
-# devDoc — AI-Powered Smart Document Search & Q&A
+# DevDoc — AI-Powered Smart Document Search & Q&A
 
 devDoc is an advanced full-stack GenAI application that allows users to upload documents (PDF, DOCX, TXT), process YouTube videos, crawl websites, and ask natural-language questions about the content.
 The system uses RAG (Retrieval-Augmented Generation), Vector Databases, and Google Gemini 2.5 Flash to deliver fast, precise, context-aware answers.
@@ -52,7 +52,7 @@ This ensures accuracy, freshness, and grounded answers.
 
 -----
 
-## devDoc – Smart Document Search & Q&A
+## DevDoc – Smart Document Search & Q&A
 
 devDoc allows users to:
 * Upload PDF, DOCX, TXT documents
@@ -153,7 +153,7 @@ Chunks + user question → Gemini → final answer.
 ## Project Structure
 
 ```
-devDoc/
+DevDoc/
 ├── client/ # Next.js frontend
 │   ├── app/
 │   ├── components/
@@ -161,8 +161,8 @@ devDoc/
 │   │     ├── chat-interface.jsx       
 │   │     ├── file-upload.jsx  
 │   │     └── progress-popup.tsx 
-│ ├── utils/
-│ └── package.json
+│   ├── utils/
+│   └── package.json
 │
 └── server/ # Node.js backend
 |   ├── controllers/
@@ -222,3 +222,4 @@ nodemon index.js
 cd client
 npm run dev
 ```
+
