@@ -21,4 +21,52 @@ If you sent all the data to the model every time, latency would explode and cost
 
 This is where Vector Databases and RAG come in.
 
+-----
 
+# What Are Vector Databases?
+
+Imagine every piece of text converted into a point in a high-dimensional space (like coordinates x, y, z in 3D).
+Now imagine all points in Uttar Pradesh mapped in this space.
+
+If you ask:
+“What is the best place to visit in Gorakhpur?”
+You don’t scan all points;
+you only search for points closest to your question.
+
+This is what a Vector Database like Qdrant does:
+
+* Stores text as numerical vectors
+* Finds similarities extremely fast
+* Retrieves only the most relevant chunks
+
+-----
+
+# What Is RAG (Retrieval-Augmented Generation)?
+
+Continuing the Gorakhpur example:
+1. You ask a question
+2. Vector DB finds the closest text chunks
+3. Those chunks are passed to the AI model
+4. The AI generates an answer based on real data
+This ensures accuracy, freshness, and grounded answers.
+
+-----
+
+# devDoc – Smart Document Search & Q&A
+
+devDoc allows users to:
+* 📄 Upload PDF, DOCX, TXT documents
+* ▶️ Process YouTube videos using transcript extraction
+* 🌐 Crawl websites for text content
+* 🤖 Ask question(s) in real-time
+* ⚡ Receive context-aware responses powered by Gemini 2.5 Flash
+
+The system handles:
+* Text extraction
+* Chunking
+* Embedding generation
+* Vector storage
+* Semantic search
+* RAG-based answer generation
+
+-----
