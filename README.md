@@ -140,3 +140,19 @@ Chunks + user question → Gemini → final answer.
 ## 🔌 API Endpoints
 
 ### **📁 Upload Document**
+POST /api/upload
+
+### **🎥 YouTube Transcript**
+POST /api/yt-transcript
+
+
+### **🌐 Crawl Website**
+POST /api/web-crawler
+
+
+### **❓ Q&A**
+POST /api/ask
+
+---
+
+## 📁 Project Structure
