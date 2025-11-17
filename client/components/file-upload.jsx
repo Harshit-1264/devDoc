@@ -8,6 +8,7 @@ import {
   CheckCircle,
   AlertCircle
 } from "lucide-react";
+import localFont from "next/font/local";
 
 // components
 import { Input } from "./ui/input";
@@ -32,6 +33,10 @@ import {
   createHandleFileInput,
   createRemoveFile,
 } from "@/utils/uiFunctions";
+
+const monoskaFont = localFont({
+  src: "../app/fonts/Monoska.ttf",
+});
 
 
 function FileUpload({
@@ -103,17 +108,17 @@ function FileUpload({
   };
 
   return (
-    <div className="flex h-screen flex-col bg-background">
+    <div className={`flex h-screen flex-col bg-background ${monoskaFont.className}`}>
       <div className="grid h-full grid-cols-1 md:grid-cols-5 bg-background">
         {/* Left side - 60% */}
-        <div className="flex flex-col h-full w-full col-span-3 border-b border-border md:border-b-0 px-8 bg-background">
+        <div className={`flex flex-col h-full w-full col-span-3 border-b border-border md:border-b-0 px-8 bg-background ${monoskaFont.className}`}>
           {/* NavBar moved inside left side */}
           <nav className="h-20 bg-background border-border">
             <div className="flex items-center justify-end h-full">
               <span className="text-2xl md:text-4xl text-primary font-light">
                 {"["}
               </span>
-              <h1 className="text-xl md:text-2xl uppercase font-bold text-primary">
+              <h1 className="text-xl md:text-2xl font-bold text-primary">
                 vector-docs{" "}
               </h1>
               <span className="text-2xl md:text-4xl  text-primary font-light">
@@ -124,7 +129,7 @@ function FileUpload({
 
           <div className="flex flex-col justify-center items-start grow">
             <div className="max-w-lg">
-              <div className="text-3xl md:text-6xl text-primary font-bold mb-6 font-serif leading-tight">
+              <div className={`text-3xl md:text-6xl text-primary font-bold mb-6 font-serif leading-tight ${monoskaFont.className}`}>
                 Turn Documents Into
                 <p className="text-xl md:text-2xl">
                   Conversations, Knowledge, Insights, Answers
