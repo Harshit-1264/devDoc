@@ -181,37 +181,46 @@ devDoc/
 
 ## 🛠 Installation & Setup
 
-### **1. Clone the Repo**
+**1. Clone the Repo**
 ```bash
 git clone https://github.com/Harshit-1264/devDoc
 cd devDoc
 ```
-### **2. Install Dependencies
-Backend:
+**2. Install Dependencies**
+```bash
+# Backend:
 cd server
 npm install
 
-Frontend:
+# Frontend:
 cd ../client
 npm install
+```
 
-Environment Variables
-server/.env
+**3. Environment Variables**
+Create `.env` files in both server and client directories with your API keys:
+```bash
+# server/.env
 GOOGLE_API_KEY=your_key
 QDRANT_URL=your_qdrant_url
 QDRANT_API_KEY=your_qdrant_api_key
 PORT=4000
 
-client/.env.local
+# client/.env.local
 NEXT_PUBLIC_YOUTUBE_API_KEY=your_key
 NEXT_PUBLIC_BASE_URL=http://localhost:4000
+```
 
-Run Project
+**4. Start the development servers**
+```bash
+# Run Project
 Backend:
 cd server
 nodemon index.js
 
-Frontend:
+# Frontend:
 cd client
 npm run dev
+```
+
 
