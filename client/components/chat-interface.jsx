@@ -55,7 +55,7 @@ const Chat = ({ uploadedFile, onStartOver }) => {
 
         try {
             const response = await axios.post(
-                `${process.env.NEXT_PUBLIC_API_URL}/api/ask`,
+                `${process.env.NEXT_PUBLIC_BASE_URL}/api/ask`,
                 {
                     question: inputMessage,
                 }
